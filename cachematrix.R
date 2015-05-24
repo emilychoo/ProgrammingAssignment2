@@ -1,5 +1,6 @@
 ## Cache the matrix
 ## This function creates a special "matrix" object that can cache its inverse.
+## This function will first received the matrix value through argument parameters x, then caches it to another cached matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
   cachedmInverse <- NULL
@@ -35,24 +36,3 @@ cacheSolve <- function(x, ...) {
   mInverse
 }
 
-##Testing Scripts:
-
-##m <- matrix(c(-1, -2, 1, 1), 2,2)
-##x <- makeCacheMatrix(m)
-##x$get()
-##[,1] [,2]
-##[1,]   -1    1
-##[2,]   -2    1
-
-##inv <- cacheSolve(x)
-##inv
-##[,1] [,2]
-##[1,]    1   -1
-##[2,]    2   -1
-
-##inv <- cacheSolve(x)
-##getting cached data
-##> inv
-##[,1] [,2]
-##[1,]    1   -1
-##[2,]    2   -1
